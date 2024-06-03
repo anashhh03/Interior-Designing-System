@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% block title %}Our Designers - Interio{% endblock %}
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+             <h2 class="hny-title text-center">Designers<span class="sub-dot">.</sub></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+<!-- feature with photo1 -->
+<section class="w3l-teams-33-main">
+		<div class="teams-33 section-gap">
+
+			<div class="wrapper">
+					<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+							<!---728x90--->
+
+						</div>
+				<div class="d-grid grid-col-4 align-center main-contteam-33">
+					{% for ad in desprofiles %}
+					<div class="team-main-19">
+
+						<div class="right-team-9">
+							<div class="sub-grid-33">
+								<h5><a href="/designerprofiledata/{{ad.login_id.id}}" class="title-team-33"> {{ad.login_id.name}}</a></h5>
+								<p class="sm-text-33" style="margin-top:8px;">{{ad.i_desc|slice:":30"}}</p><br>
+								<h5 class="sm-text-33">{{ad.i_experience}} years of Experience</h5>
+
+							</div>
+
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+						<!---728x90--->
+
+					</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+{% endblock %}

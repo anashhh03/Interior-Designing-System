@@ -1,0 +1,124 @@
+{% extends 'basic.html' %}
+{% block title %}Design Page - Interio{% endblock %}
+
+
+
+{% block head %}
+
+<style>
+.mybtnstyle {
+    min-width: 130px;
+    cursor: pointer;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: var(--theme-color);
+    height: 45px;
+    transition: 0.3s ease;
+    border: none;
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+</style>
+{% endblock %}
+
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+             <h2 class="hny-title text-center">Design Page<span class="sub-dot">.</sub></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+<!-- teams 33 block -->
+<section class="w3l-teams-singlev-main">
+	<div class="single-team-content section-gap">
+		<div class="wrapper">
+				<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+						<!---728x90--->
+
+					</div>
+			<div class="team-content-single text-left">
+				<div class="team-sigle-grids">
+					<div class="team-single-content-left">
+						<h3 class="hny-title single-page">Design By: <br>{{designdata.login_id.name}}</h3>
+						<h3>{{designdata.category}}</h3>
+						<p class="sub-info">{{designdata.Design_Description}}</p>
+
+
+					</div>
+
+				</div>
+				<div class="team-single-bottom">
+					<div class="team-single-projects">
+						<h4 class="hny-title">Designs</h4>
+
+						<a href="#"><img class="img" src="/media/{{designdata.dimage}}"  height="500px" width="500px" alt=""></a>
+
+					</div>
+				</div>
+
+				<div class="my-process">
+					<h4 class="hny-title">Contact Me</h4>
+					<div class="contact-single-team">
+						<div class="details-gd">
+							<h4 class="count-title">Phone No:</h4>
+							<p class="detail-para">{{designdata.login_id.phone_no}}</p>
+						</div>
+						<div class="details-gd">
+							<h4 class="count-title">Email :</h4>
+							<p class="detail-para"><a href="mailto:{{designdata.login_id.email}}"> {{designdata.login_id.email}}</a></p>
+						</div>
+						<div class="details-gd">
+							<h4 class="count-title">Address :</h4>
+							<p class="detail-para"> {{designdata.login_id.city_id}}, {{designdata.login_id.state_id}}</p>
+						</div>
+
+
+					</div>
+
+				</div>
+				{% if request.session.log_user %}
+				{% if Desgn %}
+				<div class="form-wrapv" style="margin-top: 20px;">
+				<form class="form-contact contact_form" action="/makeabid" method="post" id="contactForm" enctype="multipart/form-data">{% csrf_token %}
+                    <div class="form-sub-w3">
+						<input type="hidden" name="designid" value="{{designdata.id}}">
+						<input type="text" name="budget" placeholder="Approx. Budget" style="height:30px; width:150px; padding-left:10px; border: 2px solid;"  required="" />
+
+					</div>
+				<button type="submit" class="mybtnstyle" style="margin-top:15px; padding-top: 4px;">Make a Bid</button>
+				</form>
+				</div>
+				{% endif %}
+				{% endif %}
+			</div>
+			<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+					<!---728x90--->
+
+				</div>
+		</div>
+</section>
+
+
+</body>
+
+{% endblock %}
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/30-11-2019/livin-freedom_demo_Free/1835362585/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 05:10:12 GMT -->
+</html>
+

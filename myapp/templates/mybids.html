@@ -1,0 +1,110 @@
+{% extends 'basic.html' %}
+{% block title %}My Bids - Interio{% endblock %}
+
+
+
+{% block head %}
+
+<style>
+.mybtnstyle {
+    min-width: 130px;
+    cursor: pointer;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: var(--theme-color);
+    height: 45px;
+    transition: 0.3s ease;
+    border: none;
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+</style>
+{% endblock %}
+
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+             <h2 class="hny-title text-center">My Bids<span class="sub-dot">.</sub></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+<!-- teams 33 block -->
+<section class="w3l-search-main-info">
+	<!-- /search-section -->
+	<div class="search-results section-gap">
+		<div class="wrapper">
+				<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+						<!---728x90--->
+
+					</div>
+			<div class="search-top">
+
+				<div class="search-text-info">
+
+
+					<div class="search-content">
+
+						{% for mb in mybidsdata %}
+
+						<article class="search-grid">
+							<div class="search-left-img">
+								<a href="/designsingle/{{mb.d_id.id}}" class="thumbnail"><img class="img-responsive" src="/media/{{mb.d_id.dimage}}"
+										alt="search"></a>
+							</div>
+
+							<div class="search-right-info excerpet">
+								<h4><a href="" title="">Design by: {{mb.d_id.login_id}}</a></h4>
+								<h5>Budget: {{mb.approx_budget}}</h5>
+                              <a href="/deletebid/{{mb.id}}" ><h4 style="margin-top:5px;"><i class="fa fa-trash" aria-hidden="true"></i> Delete Bid</h4></a>
+								<br>
+                                 {% if mb.b_status == "0" %}
+                                    <button class="mybtnstyle">Status: Unapproved</button>
+                                {% elif mb.b_status == "1" %}
+                                    <button class="mybtnstyle">Status: Approved</button>
+                                {% else %}
+                                    <button class="mybtnstyle">Status: Rejected</button>
+                                {% endif %}
+
+
+							</div>
+
+						</article>
+
+						{% endfor %}
+
+					</div>
+				</div>
+
+			</div>
+			<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+					<!---728x90--->
+
+				</div>
+		</div>
+	</div>
+</section>
+
+
+</body>
+
+{% endblock %}
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/30-11-2019/livin-freedom_demo_Free/1835362585/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 05:10:12 GMT -->
+</html>
+

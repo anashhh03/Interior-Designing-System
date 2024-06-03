@@ -1,0 +1,199 @@
+{% extends 'basic.html' %}
+{% block title %}Feedback - Interio{% endblock %}
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+             <h2 class="hny-title text-center">Feedback<span class="sub-dot">.</sub></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+	<!-- /contact-grid1 -->
+	<section class="w3l-contact-section-main">
+		<div class="contact-sec-inner">
+			<div class="contacts-5-grid">
+				<div class="contacts-sub-5">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1563262564932!5m2!1sen!2sin"
+						style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="map-content-5">
+					<input id="tab1" type="radio" name="tabs" checked>
+					<label class="tabtle" for="tab1">New York</label>
+
+					<input id="tab2" type="radio" name="tabs">
+					<label class="tabtle" for="tab2">Dubai</label>
+
+					<input id="tab3" type="radio" name="tabs">
+					<label class="tabtle" for="tab3">Saudi Arabia</label>
+
+					<input id="tab4" type="radio" name="tabs">
+					<label class="tabtle" for="tab4">Russia</label>
+
+					<section id="content1" class="tab-content">
+						<div class="d-grid grid-col-4">
+							<div class="service-col-4 contact">
+								<div class="icon-contact"><span class="fa fa-home"></span></div>
+								<h6>Address</h6>
+								<p>302, Minakshi Complex, Shivranjani, Ahmedabad.</p>
+
+							</div>
+							<div class="service-col-4 contact">
+								<div class="icon-contact"><span class="fa fa-envelope-o"></span></div>
+								<h6>Email</h6>
+									<a href=" {% static 'mailto:livin1@example.com' %} " class="link1">contact@gmail.com</a>
+							</div>
+							<div class="service-col-4 contact">
+								<div class="icon-contact"><span class="fa fa-phone"></span></div>
+								<h6>Phone</h6>
+								<a href=" {% static 'tel:+1(21) 224-016-8765' %} " class="link1">+91 8989898989</a>
+								<a href=" {% static 'tel:+1(21) 224-016-8764' %} " class="link1">+91 7878787878</a>
+
+							</div>
+
+						</div>
+
+					</section>
+
+					<section id="content2" class="tab-content">
+						<div class="d-grid grid-col-4">
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-home"></span></div>
+								<h6>Address</h6>
+								<p>#302, 5th Floor, ALHK-2247 ek, Al Sharafi building, Dubai.</p>
+
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-envelope-o"></span></div>
+								<h6>Email</h6>
+								<a href=" {% static 'mailto:livin1@example.com' %} " class="link1">livin1@example.com</a>
+								<a href=" {% static 'mailto:livin2@example.com' %} " class="link1">livin2@example.com</a>
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-phone"></span></div>
+								<h6>Phone</h6>
+								<a href=" {% static 'tel:+1(21) 224-016-8764' %} " class="link1">1(12) 422-610-4678</a>
+								<a href=" {% static 'tel:+1(21) 224-016-8765' %} " class="link1">1(21) 224-016-8765</a>
+
+							</div>
+
+						</div>
+
+					</section>
+					<section id="content3" class="tab-content">
+						<div class="d-grid grid-col-4">
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-home"></span></div>
+								<h6>Address</h6>
+								<p>#411, 3rd Floor, SALK-2247 ek, Al Sharafi building, Saudi Arabia.</p>
+
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-envelope-o"></span></div>
+								<h6>Email</h6>
+								<a href=" {% static 'mailto:livin1@example.com' %} " class="link1">livin1@example.com</a>
+								<a href=" {% static 'mailto:livin2@example.com' %} " class="link1">livin2@example.com</a>
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-phone"></span></div>
+								<h6>Phone</h6>
+								<a href=" {% static 'tel:+1(21) 224-016-8765' %} " class="link1">1(21) 224-016-8765</a>
+								<a href=" {% static 'tel:+1(21) 224-016-8764' %} " class="link1">1(21) 224-016-8764</a>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section id="content4" class="tab-content">
+						<div class="d-grid grid-col-4">
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-home"></span></div>
+								<h6>Address</h6>
+								<p>#248, 2nd Floor, RSSLK-2247 ek, Al Sharafi building, Russia.</p>
+
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-envelope-o"></span></div>
+								<h6>Email</h6>
+								<a href=" {% static 'mailto:livin1@example.com' %} " class="link1">livin1@example.com</a>
+								<a href=" {% static 'mailto:livin2@example.com' %} " class="link1">livin2@example.com</a>
+							</div>
+							<div class="service-col-4">
+								<div class="icon-contact"><span class="fa fa-phone"></span></div>
+								<h6>Phone</h6>
+								<a href=" {% static 'tel:+1(21) 224-016-8764' %} " class="link1">1(12) 422-610-4678</a>
+								<a href=" {% static 'tel:+1(21) 224-016-8765' %} " class="link1">1(21) 224-016-8765</a>
+							</div>
+
+						</div>
+
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //contact-grid1 -->
+
+	</section>
+	<!-- /contact-form -->
+	<section class="w3l-contact-section-form">
+		<div class="contact-sec-inner section-gap">
+			<div class="wrapper">
+				<div class="contact-form-mainv">
+						<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+								<!---728x90--->
+
+							</div>
+					<h3 class="hny-title text-center">Send a Message<span class="sub-dot">.</sub></h3>
+						<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+								<!---728x90--->
+
+							</div>
+					<p class="para-contact text-center">Welcome to leave your contact info and we will be in touch shortly</p>
+					<form class="form-contact contact_form" action="/feedbacksubmit" method="post" id="contactForm" enctype="multipart/form-data">{% csrf_token %}
+
+
+						<div class="form-group">
+							<label for="w3lName">Your Name</label>
+
+							<input type="text" name="name" id="w3lName" required>
+						</div>
+						<div class="form-group">
+							<label for="w3lSender">Your Email ID</label>
+							<input type="email" name="email" id="w3lSender" required>
+						</div>
+
+
+						<div class="form-group">
+							<label for="w3lSubject">Subject</label>
+							<input type="text" name="subject" id="w3lSubject" required>
+						</div>
+						<div class="form-group">
+							<label for="w3lSubject">Message</label>
+							<textarea name="message" id="message" spellcheck="false" required></textarea>
+						</div>
+						<button type="submit" class="btn submit">Submit</button>
+					</form>
+				</div>
+				<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+						<!---728x90--->
+
+					</div>
+			</div>
+		</div>
+	</section>
+	<!-- //contact-form -->
+
+</body>
+
+
+{% endblock %}

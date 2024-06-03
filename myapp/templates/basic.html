@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/30-11-2019/livin-freedom_demo_Free/1835362585/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 05:10:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title%} {% endblock %}</title>
+  <link rel="stylesheet" href=" {% static 'assets/css/style-freedom.css' %} ">
+	{% block head %} {% endblock %}
+</head>
+
+<body>
+<script src=' {% static '../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' %} '></script><script src="../../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+  	}
+})();
+</script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+	// format, zoneKey, segment:value, options
+	_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+}
+})();
+</script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+  	}
+})();
+</script>
+<!--<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v {% static '.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.' %} vdo.ai/core/w3layouts_V2/vdo.ai.js?vdo=34");</script>-->
+<div id="codefund"><!-- fallback content --></div>
+<script src=" {% static '../../../../../../../codefund.io/properties/441/funder.js' %} " async="async"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-98H8KRKT85'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98H8KRKT85');
+</script>
+<meta name="robots" content="noindex">
+<body>
+	<!-- Demo bar start -->
+  <link rel="stylesheet" href=" {% static '../../../../../../assests/css/font-awesome.min.css' %} ">
+<!-- New toolbar-->
+<style>
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+#w3lDemoBar.w3l-demo-bar {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 40px 5px;
+  padding-top:70px;
+  margin-bottom: 70px;
+  background: #0D1326;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+#w3lDemoBar.w3l-demo-bar a {
+  display: block;
+  color: #e6ebff;
+  text-decoration: none;
+  line-height: 24px;
+  opacity: .6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#w3lDemoBar.w3l-demo-bar span.w3l-icon {
+  display: block;
+}
+
+#w3lDemoBar.w3l-demo-bar a:hover {
+  opacity: 1;
+}
+
+#w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+  color: #e6ebff;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+  margin-top: 30px;
+  border-top: 1px solid #41414d;
+  padding-top: 40px;
+}
+#w3lDemoBar.w3l-demo-bar .demo-btns {
+  border-top: 1px solid #41414d;
+  padding-top: 30px;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+  font-size: 26px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+  margin-bottom:0;
+}
+.toggle-right-sidebar span {
+  background: #0D1326;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #e6ebff;
+  border-radius: 50px;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: .5;
+}
+.pull-right {
+  float: right;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+  width: 90px;
+  z-index: 99999;
+  text-align: center;
+}
+/* ============================================================
+RIGHT SIDEBAR SECTION
+============================================================ */
+
+#right-sidebar {
+  width: 90px;
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  right: 0px;
+  top: 0;
+  margin-top: 60px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  overflow-y: auto;
+}
+
+/* ============================================================
+RIGHT SIDEBAR TOGGLE SECTION
+============================================================ */
+
+.hide-right-bar-notifications {
+  margin-right: -300px !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+  #w3lDemoBar.w3l-demo-bar a.desktop-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 767px) {
+  #w3lDemoBar.w3l-demo-bar a.tablet-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 568px) {
+  #w3lDemoBar.w3l-demo-bar a.mobile-mode{
+      display: none;
+  }
+  #w3lDemoBar.w3l-demo-bar .responsive-icons {
+      margin-top: 0px;
+      border-top: none;
+      padding-top: 0px;
+  }
+  #right-sidebar,.pull-right {
+      width: 90px;
+  }
+  #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+      margin-bottom: 0;
+  }
+}
+</style>
+
+
+
+</div>
+
+
+<!-- Headers-4 block -->
+<section class="w3l-header-4 mobile-header">
+    <header id="headers4-block">
+        <div class="wrapper-full">
+            <div class="d-grid nav-mobile-block header-align">
+                <div class="logo">
+                    <a class="brand-logo" href="/" >Interior Design Service<label class="log-w">.</label></a>
+                    <!-- if logo is image enable this
+                            <a class="brand-logo" href=" {% static '#index.html' %} ">
+                                <img src=" {% static 'image-path' %} " alt="Your logo" title="Your logo" style="height:35px;" />
+                            </a> -->
+                </div>
+                <input type="checkbox" id="nav" />
+                <label class="nav" for="nav"></label>
+                <nav>
+                    <label for="drop" class="toggle nav-height">Menu
+                        <!-- <span class="fa fa-bars"aria-hidden="true"></span> -->
+                    </label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/viewdesigns">Designs</a></li>
+                        <li><a href="/designers">Designers</a></li>
+
+                        {% if request.session.log_user %}
+                        <li class="subhny-li">
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-8" class="toggle toogle-8">Services <span class="angle-dropdown"
+                                    aria-hidden="true"></span>
+                            </label>
+                            <a href="">Services <span class="angle-dropdown" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-8">
+
+
+
+                            <ul class="sub-hvy-ul">
+                                        {% if not Desgn %}
+                                <li><a href="/uploaddesign" class="drop-text">Upload Designs</a></li>
+                                <li><a href="/mydesigns" class="drop-text">My Designs</a></li>
+                                <li><a href="/viewdesignbids" class="drop-text">View Design Bids</a></li>
+                                <li><a href="/approveddesign" class="drop-text">Approved Designs</a></li>
+                                        {% else %}
+
+                                <li> <a href="/viewdesigns" class="drop-text">View Designs</a></li>
+                                <li> <a href="/mybids" class="drop-text">My Bids</a></li>
+                                <li> <a href="/complain" class="drop-text">Raise a Complain</a></li>
+                                        {% endif %}
+
+
+
+<!--                                <li><a href=" {% static 'contact.html' %} " class="drop-text">Visit Us</a></li>-->
+                            </ul>
+                        </li>{% endif %}
+                        <li class="subhny-li">
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-8" class="toggle toogle-8">Account <span class="angle-dropdown"
+                                    aria-hidden="true"></span>
+                            </label>
+                            <a href="">Account <span class="angle-dropdown" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-8">
+
+                            <ul class="sub-hvy-ul">
+                                {% if request.session.log_user %}
+                                <li><a href="/logout" class="drop-text">Log Out</a></li>
+                                        {% if not Desgn %}
+                                <li><a href="/profile" class="drop-text">Profile</a></li>
+                                        {% else %}
+                                        {% if profiledata.i_experience == None %}
+                                <li><a href="/completeprofile" class="drop-text">Complete Profile</a></li>
+                                        {% else %}
+                                <li> <a href="/designerprofile" class="drop-text">Profile</a></li>
+                                        {% endif %}
+                                        {% endif %}
+                                {% else %}
+                                <li><a href="/login" class="drop-text">Sign In</a></li>
+                                <li><a href="/signup" class="drop-text">Sign Up</a></li>
+                                {% endif %}
+<!--                                <li><a href=" {% static 'contact.html' %} " class="drop-text">Visit Us</a></li>-->
+                            </ul>
+                        </li>
+                    {% if not Desgn %}
+                     <li><a href="/feedback">Feedback</a></li>
+                    {% endif %}
+                    </ul>
+
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <script src=" {% static 'assets/js/jquery-3.3.1.min.js' %} "></script>
+    <script>
+        $('#drop').change(function () {
+            if ($('#drop').is(":checked")) {
+                $('body').css('overflow', 'hidden');
+            } else {
+                $('body').css('overflow', 'auto');
+            }
+        });
+    </script>
+
+</section>
+
+{% block body %} {% endblock %}
+
+<!-- //form-25-section -->
+<footer>
+	<!-- footer-28 block -->
+	<section class="w3l-footer-28-main">
+		<div class="footer-28 section-gap">
+			<div class="wrapper">
+				<div class="d-grid grid-col-4 footer-top-28">
+					<div class="footer-list-28">
+
+						<h6 class="footer-title-28">Menu Links</h6>
+						<ul>
+							<li><a href="/viewdesigns">Design</a></li>
+							<li><a href="/designers">Designers</a></li>
+
+						</ul>
+					</div>
+
+					<div class="footer-list-28">
+                        {% if not Desgn %}
+						<ul>
+							<h6 class="footer-title-28">Services</h6>
+							<li><a href="/uploaddesign">Upload Designs</a></li>
+							<li><a href="/mydesigns">My Designs</a></li>
+							<li><a href="/viewdesignbids">View Design Bids</a></li>
+							<li><a href="approveddesign">Approved Design</a></li>
+						</ul>
+
+                        {% else %}
+                        <ul>
+							<h6 class="footer-title-28">Services</h6>
+							<li><a href="/viewdesigns">View Designs</a></li>
+							<li><a href="/mybids">My Bids</a></li>
+							<li><a href="/complain">Raise A Complain</a></li>
+							<li><a href="#">Privacy & Policy</a></li>
+						</ul>
+
+
+                        {% endif %}
+					</div>
+					<div class="footer-list-28">
+						<ul>
+							<h6 class="footer-title-28">Account</h6>
+                        {% if not request.session.log_user %}
+							<li><a href="/login">Login</a></li>
+							<li><a href="/signup">Register</a></li>
+                        {% endif %}
+							<li><a href="/about">About Us</a></li>
+                            {% if not Desgn %}
+                            <li><a href="/feedback">Feedback</a></li>
+                            {% endif %}
+						</ul>
+					</div>
+				</div>
+<!--				<div class="midd-footer-28 grid-col-2">-->
+<!--					<div class="copy-right">-->
+<!--						<p class="copy-footer-28">&copy; 2019 Livin. All rights reserved | Design by <a-->
+<!--								href="http://w3layouts.com/" target="_blank">W3layouts</a></p>-->
+<!--					</div>-->
+<!--					<div class="main-social-footer-28">-->
+<!--						<a class="facebook" href=" {% static '#facebook' %} "><span class="fa fa-facebook" aria-hidden="true"></span></a>-->
+<!--						<a class="twitter" href=" {% static '#twitter' %} "><span class="fa fa-twitter" aria-hidden="true"></span></a>-->
+<!--						<a class="instagram" href=" {% static '#instagram' %} "><span class="fa fa-instagram"-->
+<!--								aria-hidden="true"></span></a>-->
+<!--						<a class="google" href=" {% static '#google' %} "><span class="fa fa-google-plus" aria-hidden="true"></span></a>-->
+<!--						<a class="pinterest" href=" {% static '#pinterest' %} "><span class="fa fa-pinterest-p"-->
+<!--								aria-hidden="true"></span></a>-->
+<!--					</div>-->
+
+<!--				</div>-->
+			</div>
+		</div>
+		<!-- //footer-28 block -->
+		<!-- move top -->
+		<button onclick="topFunction()" id="movetop" title="Go to top">
+			<span class="fa fa-arrow-up" aria-hidden="true"></span>
+		</button>
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("movetop").style.display = "block";
+				} else {
+					document.getElementById("movetop").style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<!-- /move top -->
+
+	</section>
+</footer>
+
+</body>
+
+{% block js %} {% endblock %}
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/30-11-2019/livin-freedom_demo_Free/1835362585/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 05:10:12 GMT -->
+</html>
+

@@ -1,0 +1,120 @@
+{% extends 'basic.html' %}
+{% block title %}Make Payment - Interio{% endblock %}
+
+
+
+{% block head %}
+
+<style>
+.mybtnstyle {
+    min-width: 130px;
+    cursor: pointer;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: var(--theme-color);
+    height: 45px;
+    transition: 0.3s ease;
+    border: none;
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+</style>
+
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+			<h2 class="hny-title text-center">Make Payment<span class="sub-dot">.</span></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+<!-- teams 33 block -->
+<section class="w3l-forml-main">
+	<div class="form-hnyv-sec">
+		<div class="overlay-coming">
+
+
+			<!--form-stars-here-->
+			<div class="form-wrapv">
+
+				<form class="form-contact contact_form" action="/paymentsubmit" method="post" id="paymentForm" enctype="multipart/form-data" onsubmit="return validatePayment()">{% csrf_token %}
+					<div class="form-sub-w3">
+						<input type="text" name="cnmber" placeholder="Card Number" required="" />
+						<input type="hidden" name="bidid" value="{{selbd.id}}" required="" />
+
+					</div>
+
+					<div class="form-sub-w3">
+						<input type="text" name="expdate" placeholder="Expiry Date" required="" />
+
+					</div>
+
+                    <div class="form-sub-w3">
+						<input type="text" name="cvv" placeholder="CVV" required="" />
+					</div>
+
+					<div class="submit-button text-center">
+							<button class="btn">Make Payment</button>
+
+					</div>
+				</form>
+
+			</div>
+			<!--//form-ends-here-->
+
+		</div>
+	</div>
+	</div>
+	<!-- //coming -->
+	</div>
+
+</section>
+
+
+</body>
+
+
+
+{% endblock %}
+
+{% block js %}
+<script>
+function validatePayment() {
+    var testCardNumber = "1234567890123456"; // This is your test card number
+    var testExpDate = "12/25"; // Test expiry date
+    var testCVV = "123"; // Test CVV
+
+    var enteredCardNumber = document.getElementsByName("cnmber")[0].value;
+    var enteredExpDate = document.getElementsByName("expdate")[0].value;
+    var enteredCVV = document.getElementsByName("cvv")[0].value;
+
+    if (enteredCardNumber !== testCardNumber || enteredExpDate !== testExpDate || enteredCVV !== testCVV) {
+        alert("Invalid card details. Please check and try again.");
+        return false; // Prevent form submission
+    } else {
+        alert("Payment accepted.");
+        return true; // Allow form submission
+    }
+}
+</script>
+{% endblock %}

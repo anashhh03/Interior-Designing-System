@@ -1,0 +1,92 @@
+{% extends 'basic.html' %}
+{% block title %}View Designs - Interio{% endblock %}
+
+
+
+{% block head %}
+
+<style>
+.mybtnstyle {
+    min-width: 130px;
+    cursor: pointer;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: var(--theme-color);
+    height: 45px;
+    transition: 0.3s ease;
+    border: none;
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+</style>
+{% endblock %}
+
+
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+<!-- Headers-4 block -->
+<!--/inner-page -->
+<section class="w3l-inner-page-main">
+    <div class="inner-hyv-page">
+        <div class="wrapper">
+             <h2 class="hny-title text-center">View Designs<span class="sub-dot">.</sub></h2>
+        </div>
+    </div>
+</section>
+<!--//inner-page -->
+<!-- teams 33 block -->
+<section class="w3l-teams-33-main">
+		<div class="teams-33 section-gap">
+
+			<div class="wrapper">
+					<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+							<!---728x90--->
+
+						</div>
+				<div class="d-grid grid-col-4 align-center main-contteam-33">
+					{% for d in designdata %}
+					<div class="team-main-19">
+						<div class="column-19">
+							<a href="/designsingle/{{d.id}}"><img class="image" src="/media/{{d.dimage}}" style="border-radius: 0%;" alt=" "></a>
+						</div>
+						<div class="right-team-9">
+							<div class="sub-grid-33">
+								<h5><a href="/designsingle/{{d.id}}" class="title-team-33"> {{d.category}}</a></h5>
+								<p class="sm-text-33">{{ d.Design_Description|slice:":30" }}...</p>
+
+							</div>
+
+						</div>
+					</div>
+					{% endfor %}
+
+
+
+
+				</div>
+				<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+						<!---728x90--->
+
+					</div>
+			</div>
+		</div>
+	</section>
+
+
+</body>
+
+{% endblock %}
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/30-11-2019/livin-freedom_demo_Free/1835362585/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 05:10:12 GMT -->
+</html>
+
